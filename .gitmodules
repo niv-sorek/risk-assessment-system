@@ -1,0 +1,3 @@
+[submodule "vuldb-api-python-examples"]
+	path = vuldb-api-python-examples
+	url = https://github.com/vuldb/vuldb-api-python-examples.git
