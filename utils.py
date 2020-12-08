@@ -3,6 +3,7 @@ import json
 
 import requests
 
+import Constants
 from Venerability import Venerability
 
 
@@ -12,7 +13,7 @@ def find_vulnerabilities_from_file(file, search_term):
     __find_vulnerabilities(response_json, search_term)
 
 
-def find_vulnerabilities_from_API( search_term):
+def find_vulnerabilities_from_api(search_term):
     # Define arguments for API script
     parser = argparse.ArgumentParser()
     parser.add_argument('--recent', dest='recent', default=5, type=int)
@@ -21,11 +22,11 @@ def find_vulnerabilities_from_API( search_term):
     args = parser.parse_args()
 
     # Add your personal API key here
-    personalApiKey = '8076d3b1a1e2401d4d6e0df824b2d346'
+    personal_api_key = Constants.vuldb_api_key
 
     # Set HTTP Header
-    userAgent = 'Email DLP System'
-    headers = {'User-Agent': userAgent, 'X-VulDB-ApiKey': personalApiKey}
+    user_agent = 'Email DLP System'
+    headers = {'User-Agent': user_agent, 'X-VulDB-ApiKey': personal_api_key}
     post_data = {'search': search_term}
     # URL VulDB endpoint
     url = 'https://vuldb.com/?api'
@@ -37,10 +38,10 @@ def find_vulnerabilities_from_API( search_term):
 
 
 def __find_vulnerabilities(source_json, search_term):
-
     # Get API response
 
     # Output
+    vuls = []
     for i in source_json['result']:
         level = i['vulnerability']['risk'].get('value', 0)
         # level = i['vulnerability']['risk']['value']
@@ -48,4 +49,5 @@ def __find_vulnerabilities(source_json, search_term):
         # if level:
         #     print(cve, "Level: ", level)
         v = Venerability(cve, [], 2)
-        print(v.venerability_name)
+        vuls.append(v)
+    return vuls
