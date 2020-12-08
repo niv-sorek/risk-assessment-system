@@ -1,10 +1,13 @@
 
 class Venerability:
-    def __init__(self, name, exploit, level):
+    def __init__(self, name, level):
         self.venerability_name = name
-        self.number_of_exploit = exploit
+        self.number_of_exploit = 0
         self.cvss_level = level
         self.venerability_level = self.cvss_level
+
+     # def count_exploits(self):
+     #     self.number_of_exploit =
 
     def calculate_venerability_level(self):
         if self.number_of_exploit is 0:

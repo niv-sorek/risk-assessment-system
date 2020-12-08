@@ -12,7 +12,7 @@ def find_vulnerabilities_from_file(file, search_term):
     __find_vulnerabilities(response_json, search_term)
 
 
-def find_vulnerabilities_from_API( search_term):
+def find_vulnerabilities_from_API(search_term):
     # Define arguments for API script
     parser = argparse.ArgumentParser()
     parser.add_argument('--recent', dest='recent', default=5, type=int)
