@@ -1,5 +1,5 @@
 class User:
-    def __init__(self, user_id, suspicious, permissions, components):
+    def __init__(self, user_id, suspicious, permissions, user_components):
         self.user_id = user_id
         self.suspicious = suspicious
         self.permissions = permissions
