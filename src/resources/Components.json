@@ -1,0 +1,77 @@
+{"Component":[
+	{
+		"vendor":"Apple",
+		"name":"Swiftnio",
+		"version":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":""
+	}],
+"users":[
+	{"id":"1",
+		"suspicious":true,
+		"permissions": "",
+	 "user_components":[{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	}]},
+	 {"id":"2",
+	 "user_components":[{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	},
+	{
+		"vendor":"",
+		"name":"",
+		"version":"",
+		"update":""
+	}] }
+]
+
+}
