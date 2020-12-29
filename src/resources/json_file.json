@@ -1,0 +1,1722 @@
+{
+  "response": {
+    "version": "3.23",
+    "format": "json",
+    "status": "200",
+    "lang": "en",
+    "monoblock": "1",
+    "items": 9,
+    "consumption": 9,
+    "remaining": 0,
+    "querylimit": 9,
+    "querylimitmax": 9,
+    "timestamp": "1609233083",
+    "rtt": 2,
+    "etag": "674dc5d1ea56c24f-72537437751e51bd-dcca48101505dd86"
+  },
+  "request": {
+    "timestamp": "1609233081",
+    "apikey": "valid",
+    "userid": "14713",
+    "details": 1,
+    "sort": "entry_timestamp_create",
+    "type": "advancedsearch",
+    "value": "vendor:microsoft,product:Framework"
+  },
+  "result": [
+    {
+      "entry": {
+        "id": "162552",
+        "title": "Microsoft Microsoft .NET Framework up to 4.8 information disclosure",
+        "summary": "A vulnerability, which was classified as problematic, was found in Microsoft Microsoft .NET Framework up to 4.8 (Programming Language Software). Affected is an unknown code block. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability, which was classified as problematic, was found in Microsoft Microsoft .NET Framework up to 4.8 (Programming Language Software).",
+          "vulnerability": "CWE is classifying the issue as CWE-200.",
+          "impact": "This is going to have an impact on confidentiality.",
+          "exploit": "It is declared as proof-of-concept.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability."
+        },
+        "timestamp": {
+          "create": "1602656077",
+          "change": "1605725051"
+        },
+        "changelog": [
+          "vulnerability_cvss3_nvd_av",
+          "vulnerability_cvss3_nvd_ac",
+          "vulnerability_cvss3_nvd_pr",
+          "vulnerability_cvss3_nvd_ui",
+          "vulnerability_cvss3_nvd_s",
+          "vulnerability_cvss3_nvd_c",
+          "vulnerability_cvss3_nvd_i",
+          "vulnerability_cvss3_nvd_a",
+          "vulnerability_cvss2_nvd_av",
+          "vulnerability_cvss2_nvd_ac",
+          "vulnerability_cvss2_nvd_au",
+          "vulnerability_cvss2_nvd_ci",
+          "vulnerability_cvss2_nvd_ii",
+          "vulnerability_cvss2_nvd_ai"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": "Microsoft .NET Framework",
+        "version": [
+          "2.0 SP2",
+          "3.5",
+          "3.5.1",
+          "4.5.2",
+          "4.6",
+          "4.6.1",
+          "4.6.2",
+          "4.7",
+          "4.7.1",
+          "4.7.2",
+          "4.8"
+        ],
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:microsoft_.net_framework:2.0:sp2",
+          "cpe:/a:microsoft:microsoft_.net_framework:3.5",
+          "cpe:/a:microsoft:microsoft_.net_framework:3.5.1",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.5.2",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.6",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.6.1",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.6.2",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.7",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.7.1",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.7.2",
+          "cpe:/a:microsoft:microsoft_.net_framework:4.8"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:2.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:3.5:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:3.5.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.5.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.6:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.6.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.6.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.7:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.7.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.7.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:microsoft_.net_framework:4.8:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "name": "low"
+        },
+        "class": "information disclosure",
+        "cwe": "CWE-200",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "3.8",
+            "tempscore": "3.0",
+            "av": "L",
+            "ac": "H",
+            "au": "S",
+            "ci": "C",
+            "ii": "N",
+            "ai": "N",
+            "e": "P",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "4.3",
+            "tempscore": "3.0",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "N",
+            "ai": "N"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "5.0",
+            "tempscore": "4.5"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "4.7",
+            "tempscore": "4.2",
+            "basevector": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "tempvector": "E:P/RL:O/RC:C",
+            "av": "L",
+            "ac": "H",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "N",
+            "a": "N",
+            "e": "P",
+            "rl": "O",
+            "rc": "C"
+          },
+          "vendor": {
+            "basescore": "4.7",
+            "tempscore": "4.2",
+            "av": "L",
+            "ac": "H",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "N",
+            "a": "N"
+          },
+          "nvd": {
+            "basescore": "5.5",
+            "tempscore": "5.0",
+            "av": "L",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "H",
+            "i": "N",
+            "a": "N"
+          }
+        },
+        "advisoryquote": "An information disclosure vulnerability exists when the .NET Framework improperly handles objects in memory. An attacker who successfully exploited the vulnerability could disclose contents of an affected system's memory.\\nTo exploit the vulnerability, an authenticated attacker would need to run a specially crafted application.\\nThe update addresses the vulnerability by correcting how the .NET Framework handles objects in memory.\\n",
+        "timeline": [
+          {
+            "date": "1596492000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1602572400",
+            "event": "Advisory disclosed",
+            "diff": "+70 days",
+            "color": "blue"
+          },
+          {
+            "date": "1602572400",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1602633600",
+            "event": "VulDB entry created",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?recent.20201014",
+            "color": "blue"
+          },
+          {
+            "date": "1605725051",
+            "event": "VulDB last update",
+            "diff": "+35 days",
+            "link": "https://vuldb.com/?id.162552",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1602572400",
+        "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-16937",
+        "reportconfidence": "confirmed"
+      },
+      "exploit": {
+        "exploitability": "proof-of-concept",
+        "price": {
+          "0day": "$0-$5k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1602572400",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-16937"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-16937",
+          "assigned": "1596492000",
+          "summary": "An information disclosure vulnerability exists when the .NET Framework improperly handles objects in memory, aka '.NET Framework Information Disclosure Vulnerability'."
+        }
+      }
+    },
+    {
+      "entry": {
+        "id": "159514",
+        "title": "Microsoft .NET Framework up to 4.8 Cache File privileges management",
+        "summary": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical. This vulnerability affects an unknown code block of the component Cache File Handler. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical.",
+          "vulnerability": "The CWE definition for the vulnerability is CWE-269.",
+          "impact": "As an impact it is known to affect confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+          "sources": "The entry 159510 is related to this item."
+        },
+        "timestamp": {
+          "create": "1597170735",
+          "change": "1604767706"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": ".NET Framework",
+        "version": [
+          "2.0 SP2",
+          "3.5",
+          "3.5.1",
+          "4.5.2",
+          "4.6",
+          "4.6.1",
+          "4.6.2",
+          "4.7",
+          "4.7.1",
+          "4.7.2",
+          "4.8"
+        ],
+        "component": "Cache File Handler",
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_framework:2.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.5",
+          "cpe:/a:microsoft:.net_framework:3.5.1",
+          "cpe:/a:microsoft:.net_framework:4.5.2",
+          "cpe:/a:microsoft:.net_framework:4.6",
+          "cpe:/a:microsoft:.net_framework:4.6.1",
+          "cpe:/a:microsoft:.net_framework:4.6.2",
+          "cpe:/a:microsoft:.net_framework:4.7",
+          "cpe:/a:microsoft:.net_framework:4.7.1",
+          "cpe:/a:microsoft:.net_framework:4.7.2",
+          "cpe:/a:microsoft:.net_framework:4.8"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_framework:2.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.5.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.8:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-269",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.9",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "2.1",
+            "tempscore": "6.0",
+            "av": "L",
+            "ac": "L",
+            "au": "N",
+            "ci": "P",
+            "ii": "N",
+            "ai": "N"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "5.9",
+            "tempscore": "5.7"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "6.3",
+            "tempscore": "6.0",
+            "basevector": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "5.5",
+            "tempscore": "5.3",
+            "av": "L",
+            "ac": "L",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "N",
+            "a": "N"
+          }
+        },
+        "advisoryquote": "An elevation of privilege vulnerability exists when ASP.NET or .NET web applications running on IIS improperly allow access to cached files. An attacker who successfully exploited this vulnerability could gain access to restricted files.",
+        "timeline": [
+          {
+            "date": "1572822000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "Advisory disclosed",
+            "diff": "+281 days",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "VulDB entry created",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?recent.20200811",
+            "color": "blue"
+          },
+          {
+            "date": "1604767706",
+            "event": "VulDB last update",
+            "diff": "+88 days",
+            "link": "https://vuldb.com/?id.159514",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1597104000",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1476",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1597104000",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1476"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-1476",
+          "assigned": "1572822000",
+          "summary": "An elevation of privilege vulnerability exists when ASP.NET or .NET web applications running on IIS improperly allow access to cached files, aka 'ASP.NET and .NET Elevation of Privilege Vulnerability'."
+        },
+        "seealso": [
+          "159510"
+        ]
+      }
+    },
+    {
+      "entry": {
+        "id": "159510",
+        "title": "Microsoft .NET Framework 2.0 SP2/3.5/3.5.1/4.7.2/4.8 privileges management",
+        "summary": "A vulnerability, which was classified as critical, was found in Microsoft .NET Framework 2.0 SP2/3.5/3.5.1/4.7.2/4.8 (Programming Language Software). Affected is an unknown functionality. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability, which was classified as critical, was found in Microsoft .NET Framework 2.0 SP2/3.5/3.5.1/4.7.2/4.8 (Programming Language Software).",
+          "vulnerability": "CWE is classifying the issue as CWE-269.",
+          "impact": "This is going to have an impact on confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+          "sources": "Similar entry is available at 159514."
+        },
+        "timestamp": {
+          "create": "1597170340",
+          "change": "1604766409"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": ".NET Framework",
+        "version": [
+          "2.0 SP2",
+          "3.5",
+          "3.5.1",
+          "4.7.2",
+          "4.8"
+        ],
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_framework:2.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.5",
+          "cpe:/a:microsoft:.net_framework:3.5.1",
+          "cpe:/a:microsoft:.net_framework:4.7.2",
+          "cpe:/a:microsoft:.net_framework:4.8"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_framework:2.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.8:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-269",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.9",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "9.3",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "C",
+            "ii": "C",
+            "ai": "C"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "7.5",
+            "tempscore": "7.2"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "7.3",
+            "tempscore": "7.0",
+            "basevector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "7.8",
+            "tempscore": "7.5",
+            "av": "L",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A remote code execution vulnerability exists when Microsoft .NET Framework processes input. An attacker who successfully exploited this vulnerability could take control of an affected system.",
+        "timeline": [
+          {
+            "date": "1572822000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "Advisory disclosed",
+            "diff": "+281 days",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1597104000",
+            "event": "VulDB entry created",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?recent.20200811",
+            "color": "blue"
+          },
+          {
+            "date": "1604766409",
+            "event": "VulDB last update",
+            "diff": "+88 days",
+            "link": "https://vuldb.com/?id.159510",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1597104000",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1046",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1597104000",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1046"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-1046",
+          "assigned": "1572822000",
+          "summary": "A remote code execution vulnerability exists when Microsoft .NET Framework processes input, aka '.NET Framework Remote Code Execution Vulnerability'."
+        },
+        "seealso": [
+          "159514"
+        ]
+      }
+    },
+    {
+      "entry": {
+        "id": "157876",
+        "title": "Microsoft .NET Framework up to 4.8 XML File code injection",
+        "summary": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical. This vulnerability affects an unknown code block of the component XML File Handler. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical.",
+          "vulnerability": "The CWE definition for the vulnerability is CWE-94.",
+          "impact": "As an impact it is known to affect confidentiality, integrity, and availability.",
+          "exploit": "A public exploit has been developed by West Shepherd in Python and been published 2 months after the advisory. It is declared as functional. It is possible to download the exploit at exploit-db.com. As 0-day the estimated underground price was around $5k-$25k.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability."
+        },
+        "timestamp": {
+          "create": "1594793067",
+          "change": "1603976339"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": ".NET Framework",
+        "version": [
+          "2.0 SP2",
+          "3.0 SP2",
+          "3.5",
+          "3.5.1",
+          "4.5.2",
+          "4.6",
+          "4.6.1",
+          "4.6.2",
+          "4.7",
+          "4.7.1",
+          "4.7.2",
+          "4.8"
+        ],
+        "component": "XML File Handler",
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_framework:2.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.5",
+          "cpe:/a:microsoft:.net_framework:3.5.1",
+          "cpe:/a:microsoft:.net_framework:4.5.2",
+          "cpe:/a:microsoft:.net_framework:4.6",
+          "cpe:/a:microsoft:.net_framework:4.6.1",
+          "cpe:/a:microsoft:.net_framework:4.6.2",
+          "cpe:/a:microsoft:.net_framework:4.7",
+          "cpe:/a:microsoft:.net_framework:4.7.1",
+          "cpe:/a:microsoft:.net_framework:4.7.2",
+          "cpe:/a:microsoft:.net_framework:4.8"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_framework:2.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.5.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.8:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-94",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.6",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "F",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "7.5",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "L",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "8.5",
+            "tempscore": "7.9"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "7.3",
+            "tempscore": "6.8",
+            "basevector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "tempvector": "E:F/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "F",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "9.8",
+            "tempscore": "9.1",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A remote code execution vulnerability exists in .NET Framework, Microsoft SharePoint, and Visual Studio when the software fails to check the source markup of XML file input. An attacker who successfully exploited the vulnerability could run arbitrary code in the context of the process responsible for deserialization of the XML content.",
+        "timeline": [
+          {
+            "date": "1572822000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1594684800",
+            "event": "Advisory disclosed",
+            "diff": "+253 days",
+            "color": "blue"
+          },
+          {
+            "date": "1594684800",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1594771200",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200715",
+            "color": "blue"
+          },
+          {
+            "date": "1597363200",
+            "event": "Exploit disclosed",
+            "diff": "+30 days",
+            "color": "red"
+          },
+          {
+            "date": "1603976339",
+            "event": "VulDB last update",
+            "diff": "+76 days",
+            "link": "https://vuldb.com/?id.157876",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1594684800",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "availability": "1",
+        "date": "1597363200",
+        "publicity": "public",
+        "url": "https://www.exploit-db.com/exploits/48747",
+        "developer": {
+          "name": "West Shepherd"
+        },
+        "language": "Python",
+        "exploitability": "functional",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1594684800",
+        "exploitdelaydays": 31,
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-1147",
+          "assigned": "1572822000",
+          "summary": "A remote code execution vulnerability exists in .NET Framework, Microsoft SharePoint, and Visual Studio when the software fails to check the source markup of XML file input, aka '.NET Framework, SharePoint Server, and Visual Studio Remote Code Execution Vulnerability'."
+        },
+        "exploitdb": {
+          "id": "48747"
+        },
+        "sciplabs": {
+          "url": [
+            "https://www.scip.ch/en/?labs.20161013"
+          ]
+        }
+      }
+    },
+    {
+      "entry": {
+        "id": "155125",
+        "title": "Microsoft .NET Core/.NET Framework denial of service",
+        "summary": "A vulnerability classified as problematic was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (affected version unknown). Affected by this vulnerability is an unknown code block. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability classified as problematic was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (affected version unknown).",
+          "vulnerability": "The CWE definition for the vulnerability is CWE-404.",
+          "impact": "As an impact it is known to affect availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability."
+        },
+        "timestamp": {
+          "create": "1589356378",
+          "change": "1602920874"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": [
+          ".NET Core",
+          ".NET Framework"
+        ],
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_core",
+          "cpe:/a:microsoft:.net_framework"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_core:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:*:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "1",
+          "name": "low"
+        },
+        "class": "denial of service",
+        "cwe": "CWE-404",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "4.3",
+            "tempscore": "3.7",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "N",
+            "ii": "N",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "5.0",
+            "tempscore": "4.0",
+            "av": "N",
+            "ac": "L",
+            "au": "N",
+            "ci": "N",
+            "ii": "N",
+            "ai": "P"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "6.4",
+            "tempscore": "6.1"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "5.3",
+            "tempscore": "5.1",
+            "basevector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "N",
+            "i": "N",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "7.5",
+            "tempscore": "7.2",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "N",
+            "i": "N",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A denial of service vulnerability exists when .NET Core or .NET Framework improperly handles web requests. An attacker who successfully exploited this vulnerability could cause a denial of service against a .NET Core or .NET Framework web application. The vulnerability can be exploited remotely, without authentication.",
+        "timeline": [
+          {
+            "date": "1572822000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1589241600",
+            "event": "Advisory disclosed",
+            "diff": "+190 days",
+            "color": "blue"
+          },
+          {
+            "date": "1589241600",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1589328000",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200513",
+            "color": "blue"
+          },
+          {
+            "date": "1602920874",
+            "event": "VulDB last update",
+            "diff": "+157 days",
+            "link": "https://vuldb.com/?id.155125",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1589241600",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1108",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1589241600",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1108"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-1108",
+          "assigned": "1572822000",
+          "summary": "A denial of service vulnerability exists when .NET Core or .NET Framework improperly handles web requests, aka '.NET Core & .NET Framework Denial of Service Vulnerability'."
+        }
+      }
+    },
+    {
+      "entry": {
+        "id": "155098",
+        "title": "Microsoft .NET Framework 3.0 SP2/3.5.1 privileges management",
+        "summary": "A vulnerability classified as critical was found in Microsoft .NET Framework 3.0 SP2/3.5.1 (Programming Language Software). This vulnerability affects some unknown processing. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability classified as critical was found in Microsoft .NET Framework 3.0 SP2/3.5.1 (Programming Language Software).",
+          "vulnerability": "The CWE definition for the vulnerability is CWE-269.",
+          "impact": "As an impact it is known to affect confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability."
+        },
+        "timestamp": {
+          "create": "1589354134",
+          "change": "1602912071"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": ".NET Framework",
+        "version": [
+          "3.0 SP2",
+          "3.5.1"
+        ],
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_framework:3.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.5.1"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_framework:3.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5.1:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-269",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.0",
+            "tempscore": "5.2",
+            "av": "N",
+            "ac": "M",
+            "au": "S",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "4.6",
+            "tempscore": "5.0",
+            "av": "L",
+            "ac": "L",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "7.0",
+            "tempscore": "6.7"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "6.3",
+            "tempscore": "6.0",
+            "basevector": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "7.8",
+            "tempscore": "7.5",
+            "av": "L",
+            "ac": "L",
+            "pr": "L",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "An elevation of privilege vulnerability exists in .NET Framework which could allow an attacker to elevate their privilege level.",
+        "timeline": [
+          {
+            "date": "1572822000",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1589241600",
+            "event": "Advisory disclosed",
+            "diff": "+190 days",
+            "color": "blue"
+          },
+          {
+            "date": "1589241600",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1589328000",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200513",
+            "color": "blue"
+          },
+          {
+            "date": "1602912071",
+            "event": "VulDB last update",
+            "diff": "+157 days",
+            "link": "https://vuldb.com/?id.155098",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1589241600",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1066",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1589241600",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1066"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-1066",
+          "assigned": "1572822000",
+          "summary": "An elevation of privilege vulnerability exists in .NET Framework which could allow an attacker to elevate their privilege level.To exploit the vulnerability, an attacker would first have to access the local machine, and then run a malicious program.The update addresses the vulnerability by correcting how .NET Framework activates COM objects., aka '.NET Framework Elevation of Privilege Vulnerability'."
+        }
+      }
+    },
+    {
+      "entry": {
+        "id": "148624",
+        "title": "Microsoft .NET Framework up to 4.8 input validation",
+        "summary": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical. This vulnerability affects an unknown function. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability was found in Microsoft .NET Framework up to 4.8 (Programming Language Software). It has been declared as critical.",
+          "vulnerability": "The CWE definition for the vulnerability is CWE-20.",
+          "impact": "As an impact it is known to affect confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability."
+        },
+        "timestamp": {
+          "create": "1579068348",
+          "change": "1579068348"
+        }
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": ".NET Framework",
+        "version": [
+          "3.0 SP2",
+          "3.5",
+          "3.5.1",
+          "4.5.2",
+          "4.6",
+          "4.6.1",
+          "4.6.2",
+          "4.7",
+          "4.7.1",
+          "4.7.2",
+          "4.8"
+        ],
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_framework:3.0:sp2",
+          "cpe:/a:microsoft:.net_framework:3.5",
+          "cpe:/a:microsoft:.net_framework:3.5.1",
+          "cpe:/a:microsoft:.net_framework:4.5.2",
+          "cpe:/a:microsoft:.net_framework:4.6",
+          "cpe:/a:microsoft:.net_framework:4.6.1",
+          "cpe:/a:microsoft:.net_framework:4.6.2",
+          "cpe:/a:microsoft:.net_framework:4.7",
+          "cpe:/a:microsoft:.net_framework:4.7.1",
+          "cpe:/a:microsoft:.net_framework:4.7.2",
+          "cpe:/a:microsoft:.net_framework:4.8"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_framework:3.0:sp2:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:3.5.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.5.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.6.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.7.2:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:4.8:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-20",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.9",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "10.0",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "L",
+            "au": "N",
+            "ci": "C",
+            "ii": "C",
+            "ai": "C"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "8.5",
+            "tempscore": "8.2"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "7.3",
+            "tempscore": "7.0",
+            "basevector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "9.8",
+            "tempscore": "9.4",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A remote code execution vulnerability exists when the Microsoft .NET Framework fails to validate input properly. An attacker who successfully exploited this vulnerability could take control of an affected system. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights. Users whose accounts are configured to have fewer user rights on the system could be less impacted than users who operate with administrative user rights.",
+        "timeline": [
+          {
+            "date": "1578960000",
+            "event": "Advisory disclosed",
+            "color": "blue"
+          },
+          {
+            "date": "1578960000",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1579046400",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200115",
+            "color": "blue"
+          },
+          {
+            "date": "1579068648",
+            "event": "VulDB last update",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?id.148624",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1578960000",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0646",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1578960000",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0646"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-0646",
+          "summary": "A remote code execution vulnerability exists when the Microsoft .NET Framework fails to validate input properly, aka '.NET Framework Remote Code Execution Injection Vulnerability'."
+        }
+      }
+    },
+    {
+      "entry": {
+        "id": "148623",
+        "title": "Microsoft .NET Core/.NET Framework Source Markup File input validation",
+        "summary": "A vulnerability was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (the affected version unknown). It has been classified as critical. This affects some unknown processing of the component Source Markup File Handler. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (the affected version unknown). It has been classified as critical.",
+          "vulnerability": "CWE is classifying the issue as CWE-20.",
+          "impact": "This is going to have an impact on confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+          "sources": "See 148622 for similar entry."
+        },
+        "timestamp": {
+          "create": "1579068255",
+          "change": "1579068255"
+        }
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": [
+          ".NET Core",
+          ".NET Framework"
+        ],
+        "component": "Source Markup File Handler",
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_core",
+          "cpe:/a:microsoft:.net_framework"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_core:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:*:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-20",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.9",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "9.3",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "C",
+            "ii": "C",
+            "ai": "C"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "7.5",
+            "tempscore": "7.2"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "6.3",
+            "tempscore": "6.0",
+            "basevector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "8.8",
+            "tempscore": "8.4",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A remote code execution vulnerability exists in .NET software when the software fails to check the source markup of a file.",
+        "timeline": [
+          {
+            "date": "1578960000",
+            "event": "Advisory disclosed",
+            "color": "blue"
+          },
+          {
+            "date": "1578960000",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1579046400",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200115",
+            "color": "blue"
+          },
+          {
+            "date": "1579068555",
+            "event": "VulDB last update",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?id.148623",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1578960000",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0606",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1578960000",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0606"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-0606",
+          "summary": "A remote code execution vulnerability exists in .NET software when the software fails to check the source markup of a file.An attacker who successfully exploited the vulnerability could run arbitrary code in the context of the current user, aka '.NET Framework Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2020-0605."
+        },
+        "seealso": [
+          "148622"
+        ]
+      }
+    },
+    {
+      "entry": {
+        "id": "148622",
+        "title": "Microsoft .NET Core/.NET Framework Source Markup File input validation",
+        "summary": "A vulnerability was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (affected version not known) and classified as critical. Affected by this issue is an unknown code block of the component Source Markup File Handler. Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+        "details": {
+          "affected": "A vulnerability was found in Microsoft .NET Core and .NET Framework (Programming Language Software) (affected version not known) and classified as critical.",
+          "vulnerability": "Using CWE to declare the problem leads to CWE-20.",
+          "impact": "Impacted is confidentiality, integrity, and availability.",
+          "countermeasure": "Applying a patch is able to eliminate this problem. A possible mitigation has been published immediately after the disclosure of the vulnerability.",
+          "sources": "The entry 148623 is pretty similar."
+        },
+        "timestamp": {
+          "create": "1579068220",
+          "change": "1579068220"
+        }
+      },
+      "software": {
+        "vendor": "Microsoft",
+        "name": [
+          ".NET Core",
+          ".NET Framework"
+        ],
+        "component": "Source Markup File Handler",
+        "type": "Programming Language Software",
+        "website": {
+          "vendor": "https://www.microsoft.com/"
+        },
+        "cpe": [
+          "cpe:/a:microsoft:.net_core",
+          "cpe:/a:microsoft:.net_framework"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:microsoft:.net_core:*:*:*:*:*:*:*:*",
+          "cpe:2.3:a:microsoft:.net_framework:*:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "2",
+          "name": "medium"
+        },
+        "class": "privilege escalation",
+        "cwe": "CWE-20",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.8",
+            "tempscore": "5.9",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "P",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "9.3",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "M",
+            "au": "N",
+            "ci": "C",
+            "ii": "C",
+            "ai": "C"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "7.5",
+            "tempscore": "7.2"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "6.3",
+            "tempscore": "6.0",
+            "basevector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "tempvector": "E:X/RL:O/RC:C",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "L",
+            "e": "X",
+            "rl": "O",
+            "rc": "C"
+          },
+          "nvd": {
+            "basescore": "8.8",
+            "tempscore": "8.4",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "R",
+            "s": "U",
+            "c": "H",
+            "i": "H",
+            "a": "H"
+          }
+        },
+        "advisoryquote": "A remote code execution vulnerability exists in .NET software when the software fails to check the source markup of a file.",
+        "timeline": [
+          {
+            "date": "1578960000",
+            "event": "Advisory disclosed",
+            "color": "blue"
+          },
+          {
+            "date": "1578960000",
+            "event": "Countermeasure disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1579046400",
+            "event": "VulDB entry created",
+            "diff": "+1 days",
+            "link": "https://vuldb.com/?recent.20200115",
+            "color": "blue"
+          },
+          {
+            "date": "1579068520",
+            "event": "VulDB last update",
+            "diff": "+0 days",
+            "link": "https://vuldb.com/?id.148622",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1578960000",
+        "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0605",
+        "reportconfidence": "confirmed",
+        "coordination": "1"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$5k-$25k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Patch",
+        "date": "1578960000",
+        "patch": {
+          "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-0605"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2020-0605",
+          "summary": "A remote code execution vulnerability exists in .NET software when the software fails to check the source markup of a file.An attacker who successfully exploited the vulnerability could run arbitrary code in the context of the current user, aka '.NET Framework Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2020-0606."
+        },
+        "seealso": [
+          "148623"
+        ]
+      }
+    }
+  ]
+}

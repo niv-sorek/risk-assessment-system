@@ -1,0 +1,181 @@
+{
+  "response": {
+    "version": "3.23",
+    "format": "json",
+    "status": "200",
+    "lang": "en",
+    "monoblock": "1",
+    "items": 1,
+    "consumption": 1,
+    "remaining": 48,
+    "querylimit": 49,
+    "querylimitmax": 49,
+    "timestamp": "1609243985",
+    "rtt": 3,
+    "etag": "ff203757fec00044-85c4a4dbc84ed624-dcca48101505dd86"
+  },
+  "request": {
+    "timestamp": "1609243982",
+    "apikey": "valid",
+    "userid": "14956",
+    "details": 1,
+    "sort": "entry_timestamp_create",
+    "type": "advancedsearch",
+    "value": "vendor:xiaomi,product:mitalk,version:2.1.309"
+  },
+  "result": [
+    {
+      "entry": {
+        "id": "59988",
+        "title": "Xiaomi MiTalk Messenger up to 2.1.309 com.xiaomi.channel information disclosure",
+        "summary": "A vulnerability, which was classified as critical, was found in Xiaomi MiTalk Messenger up to 2.1.309 (Messaging Software). Affected is an unknown code block of the file com.xiaomi.channel. Upgrading to version 2.1.310 eliminates this vulnerability.",
+        "details": {
+          "affected": "A vulnerability, which was classified as critical, was found in Xiaomi MiTalk Messenger up to 2.1.309 (Messaging Software).",
+          "vulnerability": "CWE is classifying the issue as CWE-200.",
+          "impact": "This is going to have an impact on confidentiality, and integrity.",
+          "countermeasure": "Upgrading to version 2.1.310 eliminates this vulnerability."
+        },
+        "timestamp": {
+          "create": "1427125832",
+          "change": "1516087421"
+        },
+        "changelog": [
+          "source_cve_assigned"
+        ]
+      },
+      "software": {
+        "vendor": "Xiaomi",
+        "name": "MiTalk Messenger",
+        "version": [
+          "2.1.309"
+        ],
+        "file": "com.xiaomi.channel",
+        "type": "Messaging Software",
+        "cpe": [
+          "cpe:/a:xiaomi:mitalk_messenger:2.1.309"
+        ],
+        "cpe23": [
+          "cpe:2.3:a:xiaomi:mitalk_messenger:2.1.309:*:*:*:*:*:*:*"
+        ]
+      },
+      "vulnerability": {
+        "risk": {
+          "value": "1",
+          "name": "medium"
+        },
+        "class": "information disclosure",
+        "cwe": "CWE-200",
+        "cvss2": {
+          "vuldb": {
+            "basescore": "6.4",
+            "tempscore": "5.6",
+            "av": "N",
+            "ac": "L",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "N",
+            "e": "X",
+            "rl": "O",
+            "rc": "X"
+          },
+          "nvd": {
+            "basescore": "6.4",
+            "tempscore": "6.0",
+            "av": "N",
+            "ac": "L",
+            "au": "N",
+            "ci": "P",
+            "ii": "P",
+            "ai": "N"
+          }
+        },
+        "cvss3": {
+          "meta": {
+            "basescore": "6.5",
+            "tempscore": "6.2"
+          },
+          "vuldb": {
+            "confidence": "High",
+            "basescore": "6.5",
+            "tempscore": "6.2",
+            "basevector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "tempvector": "E:X/RL:O/RC:X",
+            "av": "N",
+            "ac": "L",
+            "pr": "N",
+            "ui": "N",
+            "s": "U",
+            "c": "L",
+            "i": "L",
+            "a": "N",
+            "e": "X",
+            "rl": "O",
+            "rc": "X"
+          }
+        },
+        "timeline": [
+          {
+            "date": "1323302400",
+            "event": "CVE assigned",
+            "color": "blue"
+          },
+          {
+            "date": "1327363200",
+            "event": "Advisory disclosed",
+            "diff": "+47 days",
+            "color": "blue"
+          },
+          {
+            "date": "1327363200",
+            "event": "NVD disclosed",
+            "diff": "+0 days",
+            "color": "blue"
+          },
+          {
+            "date": "1427068800",
+            "event": "VulDB entry created",
+            "diff": "+1154 days",
+            "link": "https://vuldb.com/?recent.20150323",
+            "color": "blue"
+          },
+          {
+            "date": "1516087421",
+            "event": "VulDB last update",
+            "diff": "+1030 days",
+            "link": "https://vuldb.com/?id.59988",
+            "color": "blue"
+          }
+        ]
+      },
+      "advisory": {
+        "date": "1327363200",
+        "url": "http://www4.comp.polyu.edu.hk/~appsec/bugs/CVE-2011-4697-vulnerability-in-MiTalk.html",
+        "reportconfidence": "not defined"
+      },
+      "exploit": {
+        "exploitability": "not defined",
+        "price": {
+          "0day": "$0-$5k",
+          "today": "$0-$5k"
+        }
+      },
+      "countermeasure": {
+        "remediationlevel": "official fix",
+        "name": "Upgrade",
+        "upgrade": {
+          "version": "2.1.310",
+          "url": "http://www4.comp.polyu.edu.hk/~appsec/bugs/CVE-2011-4697-vulnerability-in-MiTalk.html"
+        }
+      },
+      "source": {
+        "cve": {
+          "id": "CVE-2011-4697",
+          "assigned": "1323302400",
+          "published": "1327363200",
+          "summary": "The Xiaomi MiTalk Messenger (com.xiaomi.channel) application before 2.1.320 for Android does not properly protect data, which allows remote attackers to read or modify messaging information via a crafted application."
+        }
+      }
+    }
+  ]
+}
