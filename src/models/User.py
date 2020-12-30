@@ -10,7 +10,7 @@ class User:
         if self.suspicious:
             self.user_venerability_level = 10
         else:
-            self.user_venerability_level = self.max_component_level * (self.exposure_rating / 5)
+            self.user_venerability_level = self.max_component_level * (self.permissions / 5)
 
     def get_user_venerability_level(self):
         self.calculate_user_venerability_level()

@@ -1,5 +1,4 @@
 from src.models.Component import Component
-from src import utils
 
 xiaomi = Component("microsoft", "Windows", "10")
 print(str(xiaomi))
