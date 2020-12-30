@@ -75,4 +75,9 @@ def get_component_vulnerabilities(component, from_api):
     if from_api:
         return _get_component_vulnerabilities(component.vendor, component.product, component.version)
     else:
-        return vulnerabilities_from_json_file('src/resources/json_file.json')
+        if component.product == 'mitalk':
+            return vulnerabilities_from_json_file('src/resources/json_file_xiaomi.json')
+        elif component.vendor == 'microsoft':
+            return vulnerabilities_from_json_file('src/resources/json_file_microsoft.json')
+        else:
+            return vulnerabilities_from_json_file('src/resources/json_file_xiaomi.json')

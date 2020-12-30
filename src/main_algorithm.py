@@ -1,7 +1,9 @@
 from src.models.Component import Component
+from src.models.Organisation import Organisation
 
-xiaomi = Component("xiaomi", "mitalk")
-print(str(xiaomi))
+x = Organisation("My Org")
+x.read_data_from_json_file('src/resources/Components.json')
+print(x)
 '''
 1. Read From JSON all components & calculate components Risk + add to list
 2. Read from JSON all users & create a list of Components

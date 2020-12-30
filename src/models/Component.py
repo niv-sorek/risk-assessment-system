@@ -6,16 +6,28 @@ class Component:
         self.product = product
         self.version = version
         self.vendor = vendor
-        self.vulnerabilities = utils.get_component_vulnerabilities(self, True)
+        self.vulnerabilities = utils.get_component_vulnerabilities(self, False)
 
     def __str__(self):
-        s = "------------------\n" \
-            "Vendor: {0}\tProduct: {1}\tVersion: {2}\n\tVulnerabilities:\n".format(self.vendor, self.product,
-                                                                                   self.version)
-        s = s + '\t\t' + '%-15s%5s%15s%22s%10s\n' % ('cve', 'exploit',
-                                                     'fix', 'cvss_level',
-                                                     'vullevel')
+        s = "Vendor: {0}\tProduct: {1}\tVersion: {2}\n\tVulnerabilities:".format(self.vendor, self.product,
+                                                                                 self.version)
         for v in self.vulnerabilities:
-            s = s + '\t\t{0}\n'.format(str(v))
+            s = s + '\n\t\t{0}'.format(v)
 
-        return s + '------------------\n'
+        return s
+
+    def __repr__(self):
+        s = "Vendor: {0}\tProduct: {1}\tVersion: {2}\n\tVulnerabilities:\n".format(self.vendor, self.product,
+                                                                                   self.version)
+        for v in self.vulnerabilities:
+            s = s + '\n\t\t{0}'.format(v)
+
+        return s
+
+    def __hash__(self):
+        return hash(self.__repr__())
+
+    def __eq__(self, other):
+        if not isinstance(other, type(self)):
+            return NotImplemented
+        return self.vendor == other.vendor and self.product == other.product and self.version == other.version

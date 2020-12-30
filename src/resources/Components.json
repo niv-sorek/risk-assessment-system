@@ -1,77 +1,67 @@
-{"Component":[
-	{
-		"vendor":"Apple",
-		"name":"Swiftnio",
-		"version":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":""
-	}],
-"users":[
-	{"id":"1",
-		"suspicious":true,
-		"permissions": "",
-	 "user_components":[{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	}]},
-	 {"id":"2",
-	 "user_components":[{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	},
-	{
-		"vendor":"",
-		"name":"",
-		"version":"",
-		"update":""
-	}] }
-]
+{
 
+  "users": [
+    {
+      "id": "uid_1",
+      "suspicious": true,
+      "permissions": "",
+      "user_components": [
+        {
+          "vendor": "Apple",
+          "product": "Swiftnio",
+          "version": "",
+          "update": "16662632"
+        },
+        {
+          "vendor": "xiaomi",
+          "product": "mitalk",
+          "version": "",
+          "update": "3.1.2"
+        },
+        {
+          "vendor": "microsoft",
+          "product": "BlabBLa",
+          "version": "",
+          "update": "1.1.1"
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        }
+      ]
+    },
+    {
+      "id": "uid",
+      "suspicious": true,
+      "permissions": "",
+      "user_components": [
+        {
+          "vendor": "microsoft",
+          "product": "Shalala",
+          "version": "",
+          "update": "1.1.21"
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        }
+      ]
+    }
+  ]
 }
