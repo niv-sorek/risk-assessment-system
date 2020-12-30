@@ -28,11 +28,14 @@ class Organisation:
         for u in users_json:
             created_user = User(u['id'], u['suspicious'], u['permissions'])
             for c in u['user_components']:
-                if len(c['vendor']) > 0 and len(c['product']) > 0: # if legal vendor_name and product_name
-                    self.components.add(Component(c['vendor'], c['product'], c['version']))
-                    found_component = next((x for x in self.components if
+                if len(c['vendor']) > 0 and len(c['product']) > 0:         # if legal vendor_name and product_name
+                    found_component = next((x for x in self.components if  # search if component already exists
                                             x.vendor == c['vendor'] and
                                             x.product == c['product'] and
                                             x.version == c['version']), None)
+                    if found_component is None:
+                        found_component = Component(c['vendor'], c['product'], c['version'])
+
+                    self.components.add(found_component)
                     created_user.add_component(found_component, c['update'])
             self.users.add(created_user)
