@@ -35,15 +35,14 @@ def generate_vulnerabilities_list(source_json):
     if source_json.get('result', None) is not None:
         for vulnerability in source_json['result']:
             cve = vulnerability['source']['cve'].get('id', "unknown")
-            level = get_vulnerability_cvss(vulnerability)
+            level = _get_vulnerability_cvss(vulnerability)
             num_of_exploits = vulnerability['exploit'].get("availability", 0)
-            fix = get_vulnerability_fix(vulnerability)
-            v = Vulnerability(cve, fix, num_of_exploits, level)
-            vulnerabilities.append(v)
+            fix = _get_vulnerability_fix(vulnerability)
+            vulnerabilities.append(Vulnerability(cve, fix, num_of_exploits, level))
     return vulnerabilities
 
 
-def get_vulnerability_cvss(i):
+def _get_vulnerability_cvss(i):
     cvss_key = i['vulnerability'].get('cvss2', None)
     if not cvss_key:
         cvss_key = i['vulnerability'].get('cvss3', None)
@@ -54,7 +53,7 @@ def get_vulnerability_cvss(i):
     return level
 
 
-def get_vulnerability_fix(vul_json):
+def _get_vulnerability_fix(vul_json):
     countermeasure = vul_json['countermeasure']
     name = countermeasure.get('name', "")
     if name != "":
@@ -68,14 +67,12 @@ def get_vulnerability_fix(vul_json):
     return None
 
 
-def _get_vulnerabilities(vendor, product, version):
+def _get_component_vulnerabilities(vendor, product, version):
     return find_vulnerabilities_from_api(vendor, product, version)
 
 
-def get_component_vulnerabilities(component):
-    # Choose one:
-    #      THIS IS FOR API SEARCH
-    #               return get_vulnerabilities(component.vendor, component.product, component.version)
-
-    #      THIS IS FOR LOCAL JSON SEARCH
-    return vulnerabilities_from_json_file('src/resources/json_file.json')
+def get_component_vulnerabilities(component, from_api):
+    if from_api:
+        return _get_component_vulnerabilities(component.vendor, component.product, component.version)
+    else:
+        return vulnerabilities_from_json_file('src/resources/json_file.json')

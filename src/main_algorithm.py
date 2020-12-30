@@ -1,6 +1,6 @@
 from src.models.Component import Component
 
-xiaomi = Component("microsoft", "Windows", "10")
+xiaomi = Component("xiaomi", "mitalk")
 print(str(xiaomi))
 '''
 1. Read From JSON all components & calculate components Risk + add to list
