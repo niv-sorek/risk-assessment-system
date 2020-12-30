@@ -4,14 +4,10 @@ class User:
         self.suspicious = suspicious
         self.permissions = permissions
         self.max_component_level = max(component.component_level for component in user_components)
-        self.user_venerability_level = 0
+        self.user_vulnerability_level = self.calculate_user_vulnerability_level()
 
-    def calculate_user_venerability_level(self):
+    def calculate_user_vulnerability_level(self):
         if self.suspicious:
-            self.user_venerability_level = 10
+            return 10
         else:
-            self.user_venerability_level = self.max_component_level * (self.permissions / 5)
-
-    def get_user_venerability_level(self):
-        self.calculate_user_venerability_level()
-        return self.user_venerability_level
+            return self.max_component_level * (self.permissions / 5)
