@@ -1,6 +1,6 @@
 # Computer Vulnerability System
 ### Lir Shindelman  
-### Niv Sorek @github/niv-sorek
+### Niv Sorek @niv-sorek
 * Clone Project from git
 * Open Terminal
 * Navigate to your project main directory
