@@ -1,9 +1,9 @@
 # Computer Vulnerability System
-
-***Afeka** - College of Engineering in Tel Aviv*
-
-**Lir Shindelman**
-**Niv Sorek** 
+####**Afeka** - College of Engineering in Tel Aviv
+#### Students:
+* **Lir Shindelman**  
+* **Niv Sorek**  
+##### Lecturer: Eli Weintraub   
 
 
 ## How to install:
