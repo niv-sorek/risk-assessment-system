@@ -1,6 +1,12 @@
 # Computer Vulnerability System
-### Lir Shindelman  
-### Niv Sorek @github/niv-sorek
+
+***Afeka** - College of Engineering in Tel Aviv*
+
+**Lir Shindelman**
+**Niv Sorek** 
+
+
+## How to install:
 * Clone Project from git
 * Open Terminal
 * Navigate to your project main directory
@@ -23,4 +29,12 @@
 ```   
 * Make sure you have a Constants.py file in `sec/resources`
 
- 
+ ## Http Requests:
+ Get full organisation details JSON:
+ ```
+GET /organisation
+```
+Get **single** user details JSON:
+ ```
+GET /user/{user_id}
+```
