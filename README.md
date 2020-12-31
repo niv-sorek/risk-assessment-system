@@ -1,5 +1,5 @@
 # Computer Vulnerability System
-####**Afeka** - College of Engineering in Tel Aviv
+####Afeka - College of Engineering in Tel Aviv
 #### Students:
 * **Lir Shindelman**  
 * **Niv Sorek**  
