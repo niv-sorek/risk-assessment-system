@@ -7,6 +7,14 @@ from src.models.Vulnerability import Vulnerability
 from src.resources import Constants
 
 
+class ComplexEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if hasattr(obj, 'reprJSON'):
+            return obj.reprJSON()
+        else:
+            return json.JSONEncoder.default(self, obj)
+
+
 def vulnerabilities_from_json_file(file_name):
     with open(file_name, 'r') as file:
         response_json = json.loads(file.read())

@@ -2,8 +2,8 @@
   "users": [
     {
       "id": "uid_1",
-      "suspicious": true,
-      "permissions": "",
+      "suspicious": false,
+      "permissions": 5,
       "user_components": [
         {
           "vendor": "Apple",
@@ -21,7 +21,7 @@
           "vendor": "microsoft",
           "product": "BlabBLa",
           "version": "",
-          "update": "1.1.1"
+          "update": "1578950000"
         },
         {
           "vendor": "",

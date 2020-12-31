@@ -1,3 +1,4 @@
+import pickle
 from datetime import datetime
 
 
@@ -13,3 +14,8 @@ class Fix:
         else:
             s = s + ' (' + self.value + ')'
         return s
+
+    def reprJSON(self):
+        return dict(value=self.value,
+                    name=self.name,
+                    )

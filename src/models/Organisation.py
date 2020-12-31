@@ -7,12 +7,15 @@ from src.models.User import User
 class Organisation:
     def __init__(self, name):
         self.name = name
-        self.users = set()
+        self.users = []
         self.components = set()
 
     def __str__(self) -> str:
-        return '{0}\n Components: {1}\tUsers: {2}\n{3}\n'.format(self.name, len(self.components), len(self.users),
-                                                                 self.users)
+        return '{0}\n Components: {1}\tUsers: {2}\n\n'.format(self.name, len(self.components), len(self.users),
+                                                              )
+
+    def reprJSON(self):
+        return dict(name=self.name, users=self.users)
 
     def read_data_from_json_file(self, json_file):
         with open(json_file, 'r') as file:
@@ -28,7 +31,7 @@ class Organisation:
         for u in users_json:
             created_user = User(u['id'], u['suspicious'], u['permissions'])
             for c in u['user_components']:
-                if len(c['vendor']) > 0 and len(c['product']) > 0:         # if legal vendor_name and product_name
+                if len(c['vendor']) > 0 and len(c['product']) > 0:  # if legal vendor_name and product_name
                     found_component = next((x for x in self.components if  # search if component already exists
                                             x.vendor == c['vendor'] and
                                             x.product == c['product'] and
@@ -38,4 +41,4 @@ class Organisation:
 
                     self.components.add(found_component)
                     created_user.add_component(found_component, c['update'])
-            self.users.add(created_user)
+            self.users.append(created_user)

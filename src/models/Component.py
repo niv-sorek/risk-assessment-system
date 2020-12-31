@@ -1,3 +1,6 @@
+import json
+import pickle
+
 from src import utils
 
 
@@ -15,20 +18,15 @@ class Component:
         s = "Vendor: {0}\tProduct: {1}\tVersion: {2}\n\tVulnerabilities:".format(self.vendor, self.product,
                                                                                  self.version)
         for v in self.vulnerabilities:
-            s = s + '\n\t\t{0}'.format(v)
+            s = s + '\n\t\t{0}'.format(str(v))
 
         return s
 
-    def __repr__(self):
-        s = "Vendor: {0}\tProduct: {1}\tVersion: {2}\n\tVulnerabilities:\n".format(self.vendor, self.product,
-                                                                                   self.version)
-        for v in self.vulnerabilities:
-            s = s + '\n\t\t{0}'.format(v)
-
-        return s
+    def reprJSON(self):
+        return dict(vendor=self.vendor,product= self.product,version=self.version)
 
     def __hash__(self):
-        return hash(self.__repr__())
+        return hash(self.__str__())
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
