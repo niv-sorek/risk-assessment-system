@@ -3,7 +3,8 @@
 #### Students:
 * **Lir Shindelman**  
 * **Niv Sorek**  
-##### Lecturer: Eli Weintraub   
+
+**Lecturer: Eli Weintraub**
 
 
 ## How to install:
