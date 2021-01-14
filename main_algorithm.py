@@ -1,8 +1,7 @@
-from src.models.Component import Component
 from src.models.Organisation import Organisation
 
 x = Organisation("My Org")
-x.read_data_from_json_file('src/resources/Components.json')
+x.read_users_from_json_file('src/resources/Components.json')
 print(x)
 '''
 1. Read From JSON all components & calculate components Risk + add to list

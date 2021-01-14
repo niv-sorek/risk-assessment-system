@@ -23,7 +23,7 @@ class Component:
         return s
 
     def reprJSON(self):
-        return dict(vendor=self.vendor,product= self.product,version=self.version)
+        return dict(vendor=self.vendor, product=self.product, version=self.version)
 
     def __hash__(self):
         return hash(self.__str__())

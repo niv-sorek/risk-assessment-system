@@ -2,6 +2,7 @@ import json
 
 from src.models.Component import Component
 from src.models.User import User
+from src.utils import ComplexEncoder
 
 
 class Organisation:
@@ -11,13 +12,17 @@ class Organisation:
         self.components = set()
 
     def __str__(self) -> str:
-        return '{0}\n Components: {1}\tUsers: {2}\n\n'.format(self.name, len(self.components), len(self.users),
-                                                              )
+        # return '{0}\nComponents: {1}\tUsers: {2}\n\n {3}'.format(self.name, len(self.components), len(self.users),
+        #                                                          self.reprJSON())
+        return json.dumps(self, cls=ComplexEncoder, indent=4)
 
     def reprJSON(self):
         return dict(name=self.name, users=self.users)
 
-    def read_data_from_json_file(self, json_file):
+    def read_users_from_json_file(self, json_file):
+        """
+        :param json_file: file in JSON format to read the users from it
+        """
         with open(json_file, 'r') as file:
             data = json.loads(file.read())
         self.read_users_from_json(data['users'])

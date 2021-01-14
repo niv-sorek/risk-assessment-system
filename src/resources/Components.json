@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": "uid_1",
+      "id": "Niv",
       "suspicious": false,
       "permissions": 5,
       "user_components": [
@@ -14,14 +14,14 @@
         {
           "vendor": "xiaomi",
           "product": "mitalk",
-          "version": "",
-          "update": "3.1.2"
+          "version": "3.1.1",
+          "update": "1578980000"
         },
         {
           "vendor": "microsoft",
           "product": "BlabBLa",
           "version": "",
-          "update": "1578950000"
+          "update": "1578980000"
         },
         {
           "vendor": "",
@@ -32,7 +32,38 @@
       ]
     },
     {
-      "id": "uid",
+      "id": "Lir",
+      "suspicious": true,
+      "permissions": "",
+      "user_components": [
+        {
+          "vendor": "microsoft",
+          "product": "BlabBLa",
+          "version": "",
+          "update": "1.1.21"
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        },
+        {
+          "vendor": "",
+          "product": "",
+          "version": "",
+          "update": ""
+        }
+      ]
+    },
+    {
+      "id": "Moshe",
       "suspicious": true,
       "permissions": "",
       "user_components": [

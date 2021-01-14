@@ -1,4 +1,5 @@
 import json
+import pathlib
 
 import requests
 
@@ -84,8 +85,8 @@ def get_component_vulnerabilities(component, from_api):
         return _get_component_vulnerabilities(component.vendor, component.product, component.version)
     else:
         if component.product == 'mitalk':
-            return vulnerabilities_from_json_file('src/resources/json_file_xiaomi.json')
+            return vulnerabilities_from_json_file(pathlib.Path(__file__).parent / 'resources/json_file_xiaomi.json')
         elif component.vendor == 'microsoft':
-            return vulnerabilities_from_json_file('src/resources/json_file_microsoft.json')
+            return vulnerabilities_from_json_file(pathlib.Path(__file__).parent / 'resources/json_file_microsoft.json')
         else:
-            return vulnerabilities_from_json_file('src/resources/json_file_xiaomi.json')
+            return vulnerabilities_from_json_file(pathlib.Path(__file__).parent / 'resources/json_file_xiaomi.json')

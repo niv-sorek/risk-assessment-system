@@ -1,6 +1,8 @@
 import json
+import pathlib
 from logging.config import dictConfig
 
+from flask_cors import CORS
 from flask import Flask
 # Trying to find module in the parent package
 from flask.logging import default_handler
@@ -15,8 +17,8 @@ dictConfig({
     }},
     'handlers': {'wsgi': {
         'class': 'logging.StreamHandler',
-        'stream': 'ext://flask.logging.wsgi_errors_stream',
-        'formatter': 'default'
+            'stream': 'ext://flask.logging.wsgi_errors_stream',
+            'formatter': 'default'
     }},
     'root': {
         'level': 'INFO',
@@ -25,10 +27,12 @@ dictConfig({
 })
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.logger.removeHandler(default_handler)
 x = Organisation("My Org")
-x.read_data_from_json_file('src/resources/Components.json')
+x.read_users_from_json_file(pathlib.Path(__file__).parent / "src/resources/Components.json")
 
 
 @app.route('/organisation')
