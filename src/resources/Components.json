@@ -18,12 +18,6 @@
           "update": "1578980000"
         },
         {
-          "vendor": "microsoft",
-          "product": "BlabBLa",
-          "version": "",
-          "update": "1578980000"
-        },
-        {
           "vendor": "",
           "product": "",
           "version": "",
@@ -38,15 +32,16 @@
       "user_components": [
         {
           "vendor": "microsoft",
-          "product": "BlabBLa",
+          "product": "BlabBLaBla",
           "version": "",
           "update": "1.1.21"
         },
+
         {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
+          "vendor": "Apple",
+          "product": "ADS",
+          "version": "asd",
+          "update": "AD"
         },
         {
           "vendor": "",
