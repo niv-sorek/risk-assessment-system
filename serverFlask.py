@@ -5,8 +5,8 @@ import json
 from flask_cors import CORS
 
 app = Flask(__name__)
-
 CORS(app)
+x = Organisation("src/resources/Components.json")
 
 
 @app.route('/organisation')
@@ -40,4 +40,3 @@ def not_found():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-    x = Organisation("src/resources/Components.json")

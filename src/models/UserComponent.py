@@ -1,10 +1,6 @@
-import json
-
-import flask
-
-
 class UserComponent:
-    def __init__(self, component, update):
+    def __init__(self, component, update, user):
+        self.user = user
         self.component = component
         self.update = update
 
@@ -17,7 +13,8 @@ class UserComponent:
         vuls = []
         for v in self.component.vulnerabilities:
             if (v.fix.name == 'Patch' and v.fix.value > self.update) or v.fix.name == 'Update':
-                vuls.append(v)
+                if v.PR == "L" or v.PR == "N" or v.PR == "H" and self.user.permission == "H":
+                    vuls.append(v)
         return vuls
 
     def __str__(self) -> str:

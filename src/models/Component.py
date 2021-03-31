@@ -11,12 +11,11 @@ class Component:
         self.vendor = vendor
         self.vulnerabilities = utils.get_component_vulnerabilities(self, False)
 
-
     def update_vulnerabilities(self):
         self.vulnerabilities = utils.get_component_vulnerabilities(self, False)
 
     def __str__(self):
-        s = "{0}${1}${2}".format(self.vendor, self.product,self.version)
+        s = "{0}${1}${2}".format(self.vendor, self.product, self.version)
 
         return s
 

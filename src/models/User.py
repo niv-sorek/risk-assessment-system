@@ -8,7 +8,7 @@ class User:
     def __init__(self, user_id, suspicious, permissions):
         self.user_id = user_id
         self.suspicious = suspicious
-        self.permissions = permissions  # permissions
+        self.permissions = permissions  # L=Low | M=Med | H=High
         self.user_components = []
 
     def __str__(self) -> str:
@@ -28,7 +28,7 @@ class User:
         :param component: the Component to add to this User
         :param update: update time
         """
-        self.user_components.append(UserComponent(component, update))
+        self.user_components.append(UserComponent(component, update, self))
 
     def set_update_time(self, component, update):
         """
@@ -55,6 +55,8 @@ class User:
             return 10.0
         else:
             return self.get_max_component_level() * (self.permissions / 5)
+
+
 
     def reprJSON(self):
         return dict(id=self.user_id, suspicious=self.suspicious, user_components=self.user_components,
