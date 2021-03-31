@@ -44,22 +44,22 @@ def generate_vulnerabilities_list(source_json):
     if source_json.get('result', None) is not None:
         for vulnerability in source_json['result']:
             cve = vulnerability['source']['cve'].get('id', "unknown")
-            level = _get_vulnerability_cvss(vulnerability)
+            E, AC, AV, RL, UI, PR = _get_vulnerability_cvss_metrics(vulnerability)
             num_of_exploits = vulnerability['exploit'].get("availability", 0)
             fix = _get_vulnerability_fix(vulnerability)
-            vulnerabilities.append(Vulnerability(cve, fix, num_of_exploits, level))
+            vulnerabilities.append(Vulnerability(cve, fix, num_of_exploits, E, AC, AV, RL, UI, PR))
     return vulnerabilities
 
 
-def _get_vulnerability_cvss(i):
-    cvss_key = i['vulnerability'].get('cvss2', None)
-    if not cvss_key:
-        cvss_key = i['vulnerability'].get('cvss3', None)
-    if not cvss_key:
-        level = 0
-    else:
-        level = cvss_key['nvd'].get('basescore', 0)
-    return level
+def _get_vulnerability_cvss_metrics(i):
+    cvss_key = i['vulnerability'].get('cvss3', None)
+    E = cvss_key['nvd'].get('e', 0)
+    AC =cvss_key['nvd'].get('ac', 0)
+    AV = cvss_key['nvd'].get('av', 0)
+    RL =cvss_key['nvd'].get('rl', 0)
+    UI = cvss_key['nvd'].get('ui', 0)
+    PR = cvss_key['nvd'].get('pr', 0)
+    return E, AC, AV, RL, UI, PR
 
 
 def _get_vulnerability_fix(vul_json):
