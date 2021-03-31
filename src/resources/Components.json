@@ -1,7 +1,8 @@
 {
+  "name": "Niv&Lir",
   "users": [
     {
-      "id": "Niv",
+      "id": "Niv Sorek",
       "suspicious": false,
       "permissions": 5,
       "user_components": [
@@ -36,7 +37,6 @@
           "version": "",
           "update": "1.1.21"
         },
-
         {
           "vendor": "Apple",
           "product": "ADS",

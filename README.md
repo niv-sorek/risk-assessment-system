@@ -1,4 +1,4 @@
-# Computer Vulnerability System
+# Risk Assessment System Based on Vulnerabilities and Exploits
 
 #### Afeka - College of Engineering in Tel Aviv
 
@@ -17,7 +17,7 @@
 ```
 venv\Scripts\activate
 pip install -r requirements.txt
-set FLAST_APP=server.py
+set FLASK_APP=server.py
 flask run
 ```
 

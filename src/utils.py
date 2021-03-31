@@ -32,8 +32,8 @@ def find_vulnerabilities_from_api(vendor, product="", version=""):
     # URL VulDB endpoint
     url = 'https://vuldb.com/?api'
     response = requests.post(url, headers=headers, data=post_data)
-
     response_json = json.loads(response.content)
+    print(response_json)
     v_list = generate_vulnerabilities_list(response_json)
 
     return v_list

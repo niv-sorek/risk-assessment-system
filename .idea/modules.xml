@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MailDLP.iml" filepath="$PROJECT_DIR$/.idea/MailDLP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RiskAssessmentSystem.iml" filepath="$PROJECT_DIR$/.idea/RiskAssessmentSystem.iml" />
     </modules>
   </component>
 </project>
