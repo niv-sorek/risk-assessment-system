@@ -21,7 +21,7 @@ class UserComponent:
         return '{0} last updated: {1}'.format(str(self.component), self.update)
 
     def reprJSON(self):
-        return dict(component=self.component, update=self.update,
+        return dict(id=self.component.id, update=self.update,
                     relevant_vulnerabilities=self.relevant_vulnerabilities(), level=self.get_risk_level())
 
     def __hash__(self) -> int:

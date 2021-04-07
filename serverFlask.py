@@ -3,11 +3,16 @@ from src.models.Organisation import Organisation
 from src.utils import ComplexEncoder
 import json
 from flask_cors import CORS
+from pycvesearch import CVESearch
 
+#### https://raw.githubusercontent.com/olbat/nvdcve/master/nvdcve/CVE-YYYY-XXXX.json
 app = Flask(__name__)
 CORS(app)
 x = Organisation("src/resources/Components.json")
 
+
+# cve = CVESearch()
+# print(cve.search('microsoft/office'))
 
 @app.route('/organisation')
 def get_organisation():

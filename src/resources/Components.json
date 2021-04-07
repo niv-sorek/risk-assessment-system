@@ -1,92 +1,30 @@
 {
-  "name": "Niv&Lir",
-  "users": [
-    {
-      "id": "Niv Sorek",
-      "suspicious": false,
-      "permissions": 5,
-      "user_components": [
+    "name": "Niv&Lir",
+    "users": [
         {
-          "vendor": "Apple",
-          "product": "Swiftnio",
-          "version": "",
-          "update": "16662632"
-        },
-        {
-          "vendor": "xiaomi",
-          "product": "mitalk",
-          "version": "3.1.1",
-          "update": "1578980000"
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
+            "id": "Niv Sorek",
+            "suspicious": false,
+            "permissions": "",
+            "user_components": [
+                {
+                    "id": "c1",
+                    "update": "16662632",
+                    "relevant_vulnerabilities": [],
+                    "level": 0
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "Lir",
-      "suspicious": true,
-      "permissions": "",
-      "user_components": [
+    ],
+    "components": [
         {
-          "vendor": "microsoft",
-          "product": "BlabBLaBla",
-          "version": "",
-          "update": "1.1.21"
-        },
-        {
-          "vendor": "Apple",
-          "product": "ADS",
-          "version": "asd",
-          "update": "AD"
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
+            "id": "c1",
+            "vendor": "xiaomi",
+            "product": "AX1800",
+            "version": "",
+            "last_updated": "0",
+            "vulnerabilities": [
+
+            ]
         }
-      ]
-    },
-    {
-      "id": "Moshe",
-      "suspicious": true,
-      "permissions": "",
-      "user_components": [
-        {
-          "vendor": "microsoft",
-          "product": "BlabBLa",
-          "version": "",
-          "update": "1.1.21"
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
-        },
-        {
-          "vendor": "",
-          "product": "",
-          "version": "",
-          "update": ""
-        }
-      ]
-    }
-  ]
+    ]
 }

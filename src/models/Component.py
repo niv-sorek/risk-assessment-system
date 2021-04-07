@@ -1,18 +1,19 @@
-import json
-import pickle
-
 from src import utils
 
 
 class Component:
-    def __init__(self, vendor, product, version=""):
+    def __init__(self, id, vendor, product, version="", last_updated="", vulnerabilities=[]):
+        self.id = id
+        self.last_updated = last_updated
+        self.vulnerabilities = vulnerabilities
         self.product = product
         self.version = version
         self.vendor = vendor
-        self.vulnerabilities = utils.get_component_vulnerabilities(self, False)
+        if len(vulnerabilities) == 0:
+            self.update_vulnerabilities()
 
     def update_vulnerabilities(self):
-        self.vulnerabilities = utils.get_component_vulnerabilities(self, False)
+        self.vulnerabilities = utils.get_component_vulnerabilities(self, True)
 
     def __str__(self):
         s = "{0}${1}${2}".format(self.vendor, self.product, self.version)
@@ -20,7 +21,13 @@ class Component:
         return s
 
     def reprJSON(self):
-        return dict(vendor=self.vendor, product=self.product, version=self.version)
+        return dict(
+            id=self.id,
+            vendor=self.vendor,
+            product=self.product,
+            version=self.version,
+            last_updated=self.last_updated,
+            vulnerabilities=self.vulnerabilities)
 
     def __hash__(self):
         return hash(self.__str__())
