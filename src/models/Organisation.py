@@ -13,7 +13,7 @@ class Organisation:
         self.users = []
         self.components = []
         self.json = self.read_from_json_file(json_file)
-        with open('src/resources/Components.json','w') as file:
+        with open('src/resources/Components.json', 'w') as file:
             file.write(self.__str__())
 
     def __str__(self) -> str:
@@ -43,7 +43,6 @@ class Organisation:
         self.components.clear()
         for c in components_json:
             component = Component(c['id'], c['vendor'], c['product'], c.get("version", 0), c.get('last_updated', ""))
-            component.vulnerabilities.clear()
 
             for vul in c['vulnerabilities']:
                 component.vulnerabilities.append(Vulnerability(vul['cve'],

@@ -28,152 +28,41 @@ def find_vulnerabilities_from_api(vendor, product="", version=""):
     # Set HTTP Header
     user_agent = 'Niv and Lir'
     headers = {'User-Agent': user_agent, 'X-VulDB-ApiKey': personal_api_key}
-    post_data = {"advancedsearch": f"vendor:{vendor},product:{product}",
-                 "details": "0",
-                 'fields': "entry_details_countermeasure, countermeasure_upgrade_version, countermeasure_patch_name"}
-    if len(version) > 0:
-        post_data['advancedsearch'] += f", version:{version}"
+    post_data = {"advancedsearch": "vendor:" + vendor + ",product:" + product + ",version:" + version,
+                 "details": "1"}
     # URL VulDB endpoint
     url = 'https://vuldb.com/?api'
     response = requests.post(url, headers=headers, data=post_data)
     response_json = json.loads(response.content)
     print(response_json)
-    # cves = []
-    # for i in response_json['result']:
-    #     cves.append(i['source']['cve']['id'])
-    # vul_json = []
-    # for cve in cves:
-    #     with urllib.request.urlopen(
-    #             f"https://raw.githubusercontent.com/olbat/nvdcve/master/nvdcve/{cve}.json") as url:
-    #         vul_json.append(json.loads(url.read().decode()))
+    v_list = generate_vulnerabilities_list(response_json)
 
-    vul_json = [json.loads("""{
-  "cve": {
-    "data_type": "CVE",
-    "data_format": "MITRE",
-    "data_version": "4.0",
-    "CVE_data_meta": {
-      "ID": "CVE-2020-0044",
-      "ASSIGNER": "cve@mitre.org"
-    },
-    "problemtype": {
-      "problemtype_data": [
-        {
-          "description": [
-            {
-              "lang": "en",
-              "value": "CWE-125"
-            }
-          ]
-        }
-      ]
-    },
-    "references": {
-      "reference_data": [
-        {
-          "url": "https://source.android.com/security/bulletin/2020-03-01",
-          "name": "https://source.android.com/security/bulletin/2020-03-01",
-          "refsource": "MISC",
-          "tags": [
-            "Vendor Advisory"
-          ]
-        }
-      ]
-    },
-    "description": {
-      "description_data": [
-        {
-          "lang": "en",
-          "value": "In set_nonce of fpc_ta_qc_auth.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-137650219"
-        }
-      ]
-    }
-  },
-  "configurations": {
-    "CVE_data_version": "4.0",
-    "nodes": [
-      {
-        "operator": "OR",
-        "cpe_match": [
-          {
-            "vulnerable": true,
-            "cpe23Uri": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*"
-          }
-        ]
-      }
-    ]
-  },
-  "impact": {
-    "baseMetricV3": {
-      "cvssV3": {
-        "version": "3.1",
-        "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
-        "attackVector": "LOCAL",
-        "attackComplexity": "LOW",
-        "privilegesRequired": "HIGH",
-        "userInteraction": "NONE",
-        "scope": "UNCHANGED",
-        "confidentialityImpact": "HIGH",
-        "integrityImpact": "NONE",
-        "availabilityImpact": "NONE",
-        "baseScore": 4.4,
-        "baseSeverity": "MEDIUM"
-      },
-      "exploitabilityScore": 0.8,
-      "impactScore": 3.6
-    },
-    "baseMetricV2": {
-      "cvssV2": {
-        "version": "2.0",
-        "vectorString": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
-        "accessVector": "LOCAL",
-        "accessComplexity": "LOW",
-        "authentication": "NONE",
-        "confidentialityImpact": "PARTIAL",
-        "integrityImpact": "NONE",
-        "availabilityImpact": "NONE",
-        "baseScore": 2.1
-      },
-      "severity": "LOW",
-      "exploitabilityScore": 3.9,
-      "impactScore": 2.9,
-      "acInsufInfo": false,
-      "obtainAllPrivilege": false,
-      "obtainUserPrivilege": false,
-      "obtainOtherPrivilege": false,
-      "userInteractionRequired": false
-    }
-  },
-  "publishedDate": "2020-03-10T20:15Z",
-  "lastModifiedDate": "2020-03-11T15:58Z"
-}""")]
-    v_list = generate_vulnerabilities_list(vul_json)
     return v_list
 
 
-def generate_vulnerabilities_list(vul_json):
+def generate_vulnerabilities_list(source_json):
     vulnerabilities = []
-    if len(vul_json) > 0:
-        for vulnerability in vul_json:
-            cve = vulnerability['cve']['CVE_data_meta'].get('ID', "unknown")
+    if source_json.get('result', None) is not None:
+        for vulnerability in source_json['result']:
+            cve = vulnerability['source']['cve'].get('id', "unknown")
             E, AC, AV, RL, UI, PR = _get_vulnerability_cvss_metrics(vulnerability)
+            num_of_exploits = vulnerability['exploit'].get("availability", 0)
             fix = _get_vulnerability_fix(vulnerability)
-            vulnerabilities.append(Vulnerability(cve, fix, E, AC, AV, RL, UI, PR))
+            vulnerabilities.append(Vulnerability(cve, fix, num_of_exploits, E, AC, AV, RL, UI, PR))
     return vulnerabilities
 
 
 def _get_vulnerability_cvss_metrics(i):
-    cvss_key = i['impact']['baseMetricV3'].get('cvssV3', None)
-    if cvss_key is not None:
-        vector = cvss_key['vectorString']
-        split = vector.split('/')
-        vec_dict = dict(item.split(":") for item in vector.split("/"))
-        E = vec_dict.get('E', 1)
-        AC = vec_dict.get('AC', 1)
-        AV = vec_dict.get('AV', 1)
-        RL = vec_dict.get('RL', 1)
-        UI = vec_dict.get('UI', 1)
-        PR = vec_dict.get('PR', 1)
+    cvss3 = i['vulnerability'].get('cvss3', None)
+    provider = cvss3.get('nvd', None)
+    if provider is None:
+        provider = cvss3.get('vuldb', None)
+    E = provider.get('e', 0)
+    AC = provider.get('ac', 0)
+    AV = provider.get('av', 0)
+    RL = provider.get('rl', 0)
+    UI = provider.get('ui', 0)
+    PR = provider.get('pr', 0)
     return E, AC, AV, RL, UI, PR
 
 
@@ -185,7 +74,7 @@ def _get_vulnerability_fix(vul_json):
         if name == "Patch":
             value = countermeasure['date']
         elif name == "Upgrade":
-            value = countermeasure['upgrade']['version']
+            value = countermeasure['upgrade'].get("version", None)
         fix = Fix(name, value)
         return fix
     return None
