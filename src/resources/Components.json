@@ -4,13 +4,74 @@
         {
             "id": "Niv Sorek",
             "suspicious": false,
-            "permissions": "",
+            "permissions": "H",
             "user_components": [
                 {
                     "id": "c1",
                     "update": "16662632",
-                    "relevant_vulnerabilities": [],
-                    "level": 0
+                    "relevant_vulnerabilities": [
+                        {
+                            "cve": "CVE-2020-14099",
+                            "fix": {
+                                "value": null,
+                                "name": "Upgrade"
+                            },
+                            "cvss": "2.6",
+                            "AC": "H",
+                            "UI": "N",
+                            "AV": "A",
+                            "RL": "O",
+                            "E": "X",
+                            "PR": "L",
+                            "level": "2.20"
+                        },
+                        {
+                            "cve": "CVE-2020-14102",
+                            "fix": {
+                                "value": null,
+                                "name": "Upgrade"
+                            },
+                            "cvss": "7.2",
+                            "AC": "L",
+                            "UI": "N",
+                            "AV": "N",
+                            "RL": 0,
+                            "E": 0,
+                            "PR": "H",
+                            "level": "5.56"
+                        },
+                        {
+                            "cve": "CVE-2020-14101",
+                            "fix": {
+                                "value": null,
+                                "name": "Upgrade"
+                            },
+                            "cvss": "7.5",
+                            "AC": "L",
+                            "UI": "N",
+                            "AV": "N",
+                            "RL": 0,
+                            "E": 0,
+                            "PR": "N",
+                            "level": "5.56"
+                        },
+                        {
+                            "cve": "CVE-2020-14098",
+                            "fix": {
+                                "value": null,
+                                "name": "Upgrade"
+                            },
+                            "cvss": "7.5",
+                            "AC": "L",
+                            "UI": "N",
+                            "AV": "N",
+                            "RL": 0,
+                            "E": 0,
+                            "PR": "N",
+                            "level": "5.56"
+                        }
+                    ],
+                    "level": 5.56325
                 }
             ]
         }

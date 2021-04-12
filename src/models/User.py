@@ -21,7 +21,7 @@ class User:
         :param component: the Component to add to this User
         :param update: update time
         """
-        self.user_components.append(UserComponent(component, update, self.permissions))
+        self.user_components.append(UserComponent(component, update, self))
 
     def set_update_time(self, component, update):
         """

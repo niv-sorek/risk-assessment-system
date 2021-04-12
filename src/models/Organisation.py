@@ -42,17 +42,20 @@ class Organisation:
     def read_components_from_json(self, components_json):
         self.components.clear()
         for c in components_json:
-            component = Component(c['id'], c['vendor'], c['product'], c.get("version", 0), c.get('last_updated', ""))
+            component = Component(c['id'], c['vendor'], c['product'], c.get("version", 0), c.get('last_updated', ""),
+                                  c.get('vulnerabilities', []))
 
-            for vul in c['vulnerabilities']:
-                component.vulnerabilities.append(Vulnerability(vul['cve'],
-                                                               Fix(vul['fix']['name'], vul['fix']['value']),
-                                                               vul.get('E', None),
-                                                               vul.get('AC', None),
-                                                               vul.get('AV', None),
-                                                               vul.get('RL', None),
-                                                               vul.get('UI', None),
-                                                               vul.get('PR', None)))
+
+            # # for vul in c['vulnerabilities']:
+            # #     component.vulnerabilities.append(Vulnerability(vul['cve'],
+            # #                                                    Fix(vul['fix']['name'], vul['fix']['value']),
+            # #                                                    vul.get('cvss', 0),
+            # #                                                    vul.get('E', None),
+            # #                                                    vul.get('AC', None),
+            # #                                                    vul.get('AV', None),
+            # #                                                    vul.get('RL', None),
+            # #                                                    vul.get('UI', None),
+            # #                                                    vul.get('PR', None)))
             self.components.append(component)
 
     def read_users_from_json(self, users_json):

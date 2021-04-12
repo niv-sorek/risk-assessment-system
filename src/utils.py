@@ -45,10 +45,10 @@ def generate_vulnerabilities_list(source_json):
     if source_json.get('result', None) is not None:
         for vulnerability in source_json['result']:
             cve = vulnerability['source']['cve'].get('id', "unknown")
-            E, AC, AV, RL, UI, PR = _get_vulnerability_cvss_metrics(vulnerability)
-            num_of_exploits = vulnerability['exploit'].get("availability", 0)
+            e, ac, av, rl, ui, pr, cvss = _get_vulnerability_cvss_metrics(vulnerability)
+
             fix = _get_vulnerability_fix(vulnerability)
-            vulnerabilities.append(Vulnerability(cve, fix, num_of_exploits, E, AC, AV, RL, UI, PR))
+            vulnerabilities.append(Vulnerability(cve, fix, cvss, e, ac, av, rl, ui, pr))
     return vulnerabilities
 
 
@@ -57,13 +57,14 @@ def _get_vulnerability_cvss_metrics(i):
     provider = cvss3.get('nvd', None)
     if provider is None:
         provider = cvss3.get('vuldb', None)
-    E = provider.get('e', 0)
-    AC = provider.get('ac', 0)
-    AV = provider.get('av', 0)
-    RL = provider.get('rl', 0)
-    UI = provider.get('ui', 0)
-    PR = provider.get('pr', 0)
-    return E, AC, AV, RL, UI, PR
+    e = provider.get('e', 0)
+    ac = provider.get('ac', 0)
+    av = provider.get('av', 0)
+    rl = provider.get('rl', 0)
+    ui = provider.get('ui', 0)
+    pr = provider.get('pr', 0)
+    cvss = provider.get("basescore", 0)
+    return e, ac, av, rl, ui, pr, cvss
 
 
 def _get_vulnerability_fix(vul_json):

@@ -12,9 +12,12 @@ class UserComponent:
     def relevant_vulnerabilities(self):
         vuls = []
         for v in self.component.vulnerabilities:
-            if (v.fix.name == 'Patch' and v.fix.value > self.update) or v.fix.name == 'Update':
-                if v.PR == "L" or v.PR == "N" or v.PR == "H" and self.user.permission == "H":
-                    vuls.append(v)
+            fix = v.fix
+            if fix:
+                if (fix.name == 'Patch' and fix.value > self.update) or fix.name == 'Upgrade':
+                    if v.PR == "L" or v.PR == "N" \
+                            or v.PR == "H" and self.user.permissions == "H":
+                        vuls.append(v)
         return vuls
 
     def __str__(self) -> str:
