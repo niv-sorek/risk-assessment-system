@@ -14,7 +14,12 @@ class Organisation:
         self.components = []
         self.json = self.read_from_json_file(json_file)
         with open('src/resources/Components.json', 'w') as file:
-            file.write(self.__str__())
+            organisation_json = json.loads(json.dumps(self, cls=ComplexEncoder, indent=4))
+            for u in organisation_json["users"]:
+                for uc in u['user_components']:
+                    del uc["component"]
+
+            file.write(json.dumps(organisation_json, cls=ComplexEncoder, indent=4))
 
     def __str__(self) -> str:
         return json.dumps(self, cls=ComplexEncoder, indent=4)
@@ -44,7 +49,6 @@ class Organisation:
         for c in components_json:
             component = Component(c['id'], c['vendor'], c['product'], c.get("version", 0), c.get('last_updated', ""),
                                   c.get('vulnerabilities', []))
-
 
             # # for vul in c['vulnerabilities']:
             # #     component.vulnerabilities.append(Vulnerability(vul['cve'],
