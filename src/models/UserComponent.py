@@ -25,11 +25,14 @@ class UserComponent:
 
     def reprJSON(self):
         return dict(id=self.component.id, update=self.update,
+                    component=self.component,
                     relevant_vulnerabilities=self.relevant_vulnerabilities(), level=self.get_risk_level())
 
-    def __hash__(self) -> int:
-        return super().__hash__()
 
-    def __eq__(self, other):
-        if not isinstance(other, type(self)): return NotImplemented
-        return self.component == other.component and self.update == other.update
+def __hash__(self) -> int:
+    return super().__hash__()
+
+
+def __eq__(self, other):
+    if not isinstance(other, type(self)): return NotImplemented
+    return self.component == other.component and self.update == other.update

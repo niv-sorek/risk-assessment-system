@@ -48,4 +48,3 @@ class User:
             return 10.0
         else:
             return self.get_max_component_level()
-
