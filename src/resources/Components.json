@@ -4,7 +4,7 @@
         {
             "id": "Niv Sorek",
             "suspicious": false,
-            "permissions": "H",
+            "permissions": "L",
             "user_components": [
                 {
                     "id": "c1",
@@ -16,7 +16,7 @@
                                 "value": null,
                                 "name": "Upgrade"
                             },
-                            "cvss": "2.6",
+                            "cvss": "10",
                             "AC": "H",
                             "UI": "N",
                             "AV": "A",
@@ -24,21 +24,6 @@
                             "E": "X",
                             "PR": "L",
                             "level": "2.20"
-                        },
-                        {
-                            "cve": "CVE-2020-14102",
-                            "fix": {
-                                "value": null,
-                                "name": "Upgrade"
-                            },
-                            "cvss": "7.2",
-                            "AC": "L",
-                            "UI": "N",
-                            "AV": "N",
-                            "RL": 0,
-                            "E": 0,
-                            "PR": "H",
-                            "level": "5.56"
                         },
                         {
                             "cve": "CVE-2020-14101",
@@ -73,7 +58,8 @@
                     ],
                     "level": 5.56325
                 }
-            ]
+            ],
+            "level": 5.56325
         }
     ],
     "components": [
@@ -90,7 +76,7 @@
                         "value": null,
                         "name": "Upgrade"
                     },
-                    "cvss": "2.6",
+                    "cvss": "10",
                     "AC": "H",
                     "UI": "N",
                     "AV": "A",

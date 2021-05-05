@@ -14,7 +14,8 @@ class User:
         return dict(id=self.user_id,
                     suspicious=self.suspicious,
                     permissions=self.permissions,
-                    user_components=self.user_components)
+                    user_components=self.user_components,
+                    level=self.get_user_vulnerability_level())
 
     def add_component(self, component, update):
         """

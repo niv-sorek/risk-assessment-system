@@ -1,9 +1,7 @@
 import json
 
 from src.models.Component import Component
-from src.models.Fix import Fix
 from src.models.User import User
-from src.models.Vulnerability import Vulnerability
 from src.utils import ComplexEncoder
 
 
@@ -13,6 +11,12 @@ class Organisation:
         self.users = []
         self.components = []
         self.json = self.read_from_json_file(json_file)
+        self.save_organisation_to_file()
+
+    def __str__(self) -> str:
+        return json.dumps(self, cls=ComplexEncoder, indent=4)
+
+    def save_organisation_to_file(self):
         with open('src/resources/Components.json', 'w') as file:
             organisation_json = json.loads(json.dumps(self, cls=ComplexEncoder, indent=4))
             for u in organisation_json["users"]:
@@ -20,9 +24,6 @@ class Organisation:
                     del uc["component"]
 
             file.write(json.dumps(organisation_json, cls=ComplexEncoder, indent=4))
-
-    def __str__(self) -> str:
-        return json.dumps(self, cls=ComplexEncoder, indent=4)
 
     def get_user_by_id(self, user_id):
         for u in self.users:

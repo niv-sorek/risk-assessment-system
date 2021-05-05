@@ -1,8 +1,9 @@
-from flask import Flask
+from flask import Flask, request
 from src.models.Organisation import Organisation
 from src.utils import ComplexEncoder
 import json
 from flask_cors import CORS
+
 from pycvesearch import CVESearch
 
 #### https://raw.githubusercontent.com/olbat/nvdcve/master/nvdcve/CVE-YYYY-XXXX.json
@@ -25,6 +26,18 @@ def getuser(user_id):
     app.logger.info('*****    Looking for userID (%s)  *****', user_id)
     user = x.get_user_by_id(user_id)
     if user:
+        return json.dumps(user.reprJSON(), cls=ComplexEncoder), 200
+    return "User Not Found", 404
+
+
+@app.route('/user/<user_id>', methods=["POST"])
+def set_suspicious(user_id):
+    print(request.json["is_suspicious"])
+    app.logger.info('*****    L (%s)  *****', request)
+    user = x.get_user_by_id(user_id)
+    if user:
+        user.suspicious = request.json["is_suspicious"]
+        x.save_organisation_to_file()
         return json.dumps(user.reprJSON(), cls=ComplexEncoder), 200
     return "User Not Found", 404
 
