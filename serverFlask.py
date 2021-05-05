@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 from src.models.Organisation import Organisation
 from src.utils import ComplexEncoder
@@ -56,5 +58,6 @@ def not_found():
     return 'Error'
 
 
+port = int(os.environ.get('PORT', 33507))
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    app.run(debug=False, port=port)
