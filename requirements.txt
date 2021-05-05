@@ -55,7 +55,6 @@ pandas==1.2.3
 pefile==2019.4.18
 Pillow==8.1.2
 pipenv==2020.11.15
-py2exe==0.10.3.1
 pycosat==0.6.3
 pycparser==2.20
 pycvesearch==1.0.1
